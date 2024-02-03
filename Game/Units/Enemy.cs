@@ -5,11 +5,11 @@ namespace Game.Units
 {
     public class Enemy : BaseUnit
     {
-        private int _commandCount;
-        private int _secondAbiltyModifier;
-        
         public int CommandCount => _commandCount;
         public int SecondAbiltyModifier => _secondAbiltyModifier;
+        
+        private int _commandCount;
+        private int _secondAbiltyModifier;
 
         public Enemy(float maxHealth, float weaponDamage, float healAmount)
         {

@@ -5,10 +5,11 @@ namespace Game.Units
 {
     public class Player : BaseUnit
     {
-        private float _abilityDamage;
-        private int _shieldCount;
         public float AbilityDamage => _abilityDamage;
         public int ShieldCount => _shieldCount;
+        
+        private float _abilityDamage;
+        private int _shieldCount;
     
         public Player(float maxHealth, float weaponDamage, float abilitylDamage, float healAmount)
         {

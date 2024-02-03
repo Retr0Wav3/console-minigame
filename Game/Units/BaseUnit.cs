@@ -10,15 +10,7 @@ namespace Game.Units
         public float WeaponDamage { get; protected set; }
         public EUnitAction LastAction { get; protected set; }
         public Dictionary<ERecordType, List<float>> DamageHistory;
-        public List<string> ActionsDescriptions;
-        
-        
-        protected void InitDamageHistory(Dictionary<ERecordType, List<float>> damageHistory)
-        {
-            damageHistory[ERecordType.DamageToEnemy] = [];
-            damageHistory[ERecordType.SelfInflictedDamage] = [];
-            damageHistory[ERecordType.SelfHealing] = [];
-        }
+        protected List<string> ActionsDescriptions;
         
         public abstract void Attack(BaseUnit target, float damage, EAttackType attackType);
         
@@ -44,6 +36,13 @@ namespace Game.Units
         public void TakeDamage(float damageAmount, EDamageType damageType)
         {
             Health.UpdateHealth(damageAmount, damageType);
+        }
+        
+        protected void InitDamageHistory(Dictionary<ERecordType, List<float>> damageHistory)
+        {
+            damageHistory[ERecordType.DamageToEnemy] = [];
+            damageHistory[ERecordType.SelfInflictedDamage] = [];
+            damageHistory[ERecordType.SelfHealing] = [];
         }
     }
 }

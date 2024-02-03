@@ -7,12 +7,13 @@ namespace Game.Class
 {
     public class GameController
     {
+        public Input Input { get; }
+        public Logger Logger { get; }
+        
         private Player _player;
         private Enemy _enemy;
         private int _playerCommand;
         private int _enemyCommand;
-        public Input Input { get; }
-        public Logger Logger { get; }
 
         public GameController(Player player, Enemy enemy)
         {

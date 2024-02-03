@@ -4,14 +4,14 @@ namespace Game.Systems
 {
     public class Health
     {
-        private float _maxHealth;
-        private float _currentHealth;
-        private float _healAmount;
-
         public float MaxHealth => _maxHealth; 
         public float CurrentHealth => _currentHealth;
         public float HealAmount => _healAmount;
-
+        
+        private float _maxHealth;
+        private float _currentHealth;
+        private float _healAmount;
+        
         public Health(float maxHealth, float healAmount)
         {
             _maxHealth = maxHealth;
