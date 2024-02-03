@@ -1,7 +1,8 @@
-﻿namespace Game.Enums;
-
-public enum EAttackType
+﻿namespace Game.Enums
 {
-    Weapon,
-    Ability
+    public enum EAttackType
+    {
+        Weapon,
+        Ability
+    }
 }

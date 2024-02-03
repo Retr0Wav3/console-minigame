@@ -1,8 +1,10 @@
-﻿namespace Game.Enums;
-
-public enum EDamageType
+﻿namespace Game.Enums
 {
-    Physical,
-    Elemental,
-    Healing,
+    public enum EDamageType
+    {
+        Physical,
+        Elemental,
+        Healing,
+    }
 }
+
